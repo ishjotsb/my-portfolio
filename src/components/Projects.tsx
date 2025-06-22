@@ -1,4 +1,4 @@
-import { Globe, Video, ExternalLink, Github } from 'lucide-react'
+import { Globe, Video, Github } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
 import { Button } from './ui/button'
 
@@ -114,16 +114,7 @@ export function Projects() {
               </CardHeader>
 
               <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-secondary/20 text-secondary-foreground rounded-full text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                
 
                 <div className="flex space-x-4">
                   <a
