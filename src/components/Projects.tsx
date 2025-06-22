@@ -1,43 +1,43 @@
-import { ExternalLink, Github } from 'lucide-react'
+import { Globe, Video, ExternalLink, Github } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
 import { Button } from './ui/button'
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.',
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
-    github: '#',
+    title: 'Praisely',
+    description: 'A modern platform for peer recognition and praise sharing.',
+    image: '/praisely.png',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    visit: 'https://praisely.vercel.app',
     demo: '#',
     featured: true,
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task management application with real-time updates and team collaboration features.',
-    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
-    github: '#',
+    title: 'Plant',
+    description: 'A smart app to help you track and care for your plants.',
+    image: '/plant.png',
+    technologies: ['React Native', 'Expo', 'Firebase'],
+    visit: 'https://plan-t.ca',
     demo: '#',
     featured: true,
   },
   {
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather dashboard with location-based forecasts and interactive charts.',
-    image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'Chart.js', 'Weather API', 'Tailwind CSS'],
-    github: '#',
+    title: 'Peekabite',
+    description: 'A fun food discovery and review platform.',
+    image: '/peekabite.png',
+    technologies: ['Next.js', 'Supabase', 'Tailwind CSS'],
+    visit: 'https://peekabite.ca',
     demo: '#',
-    featured: false,
+    featured: true,
   },
   {
-    title: 'Chat Application',
-    description: 'Real-time chat application with group conversations and file sharing capabilities.',
-    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-    github: '#',
+    title: 'Mailstorm',
+    description: 'Bulk email automation made easy and efficient.',
+    image: '/mailstorm.png',
+    technologies: ['React', 'Express', 'SendGrid'],
+    visit: 'https://mailstorm.vercel.app',
     demo: '#',
-    featured: false,
+    featured: true,
   },
 ]
 
@@ -68,26 +68,38 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                    <a
+                      href={project.visit}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </Button>
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                      >
+                        <Globe className="h-4 w-4 mr-2" />
+                        Visit
+                      </Button>
+                    </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+                      >
+                        <Video className="h-4 w-4 mr-2" />
+                        Demo
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -114,22 +126,36 @@ export function Projects() {
                 </div>
 
                 <div className="flex space-x-4">
-                  <Button
-                    variant="outline"
-                    size="sm"
+                  <a
+                    href={project.visit}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      <Globe className="h-4 w-4 mr-2" />
+                      Visit
+                    </Button>
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1"
                   >
-                    <Github className="h-4 w-4 mr-2" />
-                    Source Code
-                  </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      <Video className="h-4 w-4 mr-2" />
+                      Demo
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
