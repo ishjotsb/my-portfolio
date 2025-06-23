@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { Moon, Sun, Menu, X, Download } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
 import { Button } from './ui/button'
 import './logo-font.css'
@@ -67,7 +67,16 @@ export function Navbar() {
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
-
+            {/* Download CV Button - Desktop */}
+            <a
+              href="/cv.pdf"
+              download
+              className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors font-medium text-sm"
+              style={{ textDecoration: 'none' }}
+            >
+              <Download size={16} />
+              Download CV
+            </a>
             {/* Mobile menu button */}
             <Button
               variant="ghost"
@@ -93,6 +102,16 @@ export function Navbar() {
                   {item.label}
                 </button>
               ))}
+              {/* Download CV Button - Mobile */}
+              <a
+                href="/cv.pdf"
+                download
+                className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors font-medium text-sm mt-2"
+                style={{ textDecoration: 'none' }}
+              >
+                <Download size={16} />
+                Download CV
+              </a>
             </div>
           </div>
         )}

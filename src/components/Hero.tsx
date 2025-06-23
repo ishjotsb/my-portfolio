@@ -29,6 +29,7 @@ export function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
+
       {/* Subtle cursor gradient for dark mode */}
       {theme === 'dark' && (
         <div
@@ -40,7 +41,7 @@ export function Hero() {
             width: '100vw',
             height: '100vh',
             zIndex: 5,
-            background: `radial-gradient(600px at ${cursor.x}px ${cursor.y}px, rgba(255,255,255,0.07) 0%, transparent 80%)`,
+            background: `radial-gradient(350px at ${cursor.x}px ${cursor.y}px, rgba(80,150,255,0.12) 0%, transparent 80%)`,
             transition: 'background 0.2s',
           }}
         />
