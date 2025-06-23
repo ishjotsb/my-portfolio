@@ -5,7 +5,7 @@ import { Button } from './ui/button'
 const projects = [
   {
     title: 'Praisely',
-    description: 'A modern platform for peer recognition and praise sharing.',
+    description: 'A SaaS platform that enables businesses to collect and display customer reviews via unique product pages and customizable “Wall of Love” embeds.',
     image: '/praisely.png',
     technologies: ['React', 'Node.js', 'MongoDB'],
     visit: 'https://praisely.vercel.app',
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: 'Plant',
-    description: 'A smart app to help you track and care for your plants.',
+    description: 'A full-stack application designed for landscaping businesses to manage clients, inventory, and scheduling in real-time.',
     image: '/plant.png',
     technologies: ['React Native', 'Expo', 'Firebase'],
     visit: 'https://plan-t.ca',
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: 'Peekabite',
-    description: 'A fun food discovery and review platform.',
+    description: 'An AI-powered mobile app that scans food barcodes and delivers personalized nutritional insights using OpenAI\'s LLMs.',
     image: '/peekabite.png',
     technologies: ['Next.js', 'Supabase', 'Tailwind CSS'],
     visit: 'https://peekabite.ca',
@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: 'Mailstorm',
-    description: 'Bulk email automation made easy and efficient.',
+    description: 'Effortless Bulk Emails, Personalized for Everyone. In 3 simple steps.',
     image: '/mailstorm.png',
     technologies: ['React', 'Express', 'SendGrid'],
     visit: 'https://mailstorm.vercel.app',

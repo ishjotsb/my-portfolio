@@ -2,6 +2,9 @@ import { ArrowDown, Github, Linkedin, Mail, Calendar } from 'lucide-react'
 import { Button } from './ui/button'
 
 
+import { useTheme } from './ThemeProvider'
+import { useEffect, useState } from 'react'
+
 export function Hero() {
   const scrollToSkills = () => {
     const element = document.getElementById('skills')
@@ -10,8 +13,45 @@ export function Hero() {
     }
   }
 
+  const { theme } = useTheme();
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+  const [windowSize, setWindowSize] = useState({ w: 0, h: 0 });
+
+  useEffect(() => {
+    if (theme !== 'dark') return;
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursor({ x: e.clientX, y: e.clientY });
+    };
+    const handleResize = () => {
+      setWindowSize({ w: window.innerWidth, h: window.innerHeight });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [theme]);
+
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
+      {/* Subtle cursor gradient for dark mode */}
+      {theme === 'dark' && (
+        <div
+          style={{
+            pointerEvents: 'none',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100vw',
+            height: '100vh',
+            zIndex: 5,
+            background: `radial-gradient(600px at ${cursor.x}px ${cursor.y}px, rgba(255,255,255,0.07) 0%, transparent 80%)`,
+            transition: 'background 0.2s',
+          }}
+        />
+      )}
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
 
@@ -61,13 +101,13 @@ export function Hero() {
           </div>
 
           <div className="flex justify-center space-x-6 mb-12">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+            <a href="https://github.com/ishjotsb" className="text-muted-foreground hover:text-primary transition-colors duration-200" target='_blank' rel='noopener noreferrer'>
               <Github className="h-6 w-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+            <a href="https://linkedin.com/in/ishjotsb" className="text-muted-foreground hover:text-primary transition-colors duration-200" target='_blank' rel='noopener noreferrer'>
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+            <a href="mailto:ishjotca@gmail.com" className="text-muted-foreground hover:text-primary transition-colors duration-200" target='_blank' rel='noopener noreferrer'>
               <Mail className="h-6 w-6" />
             </a>
           </div>

@@ -8,7 +8,7 @@ const experiences = [
     company: 'Fluidwave',
     location: 'Vancouver, Canada',
     period: 'Feb 2025 - April 2025',
-    description: 'Led development of scalable microservices architecture, improving system performance by 40%. Mentored junior developers and implemented best practices for code quality.',
+    description: 'Led the development of an AI-powered React Native app with LiveKit AI voice agents, used by 2,500+ users. Integrated Clerk and Replicache for real-time sync and authentication. Delivered secure, scalable features in an Agile team.',
     technologies: ['React Native', 'TypeScript', 'Clerk', 'LiveKit', 'CapacitorJS'],
   },
   {
@@ -17,7 +17,7 @@ const experiences = [
     company: 'Smart Energy Water',
     location: 'Noida, India',
     period: 'July 2021 - July 2023',
-    description: 'Built and maintained full-stack web applications serving 10k+ users. Collaborated with product team to deliver features that increased user engagement by 25%.',
+    description: 'Developed full-stack enterprise apps using ASP.NET, C#, and SQL. Integrated SAP and Salesforce APIs and built POS modules that improved transaction speed by 30%. Focused on API security and Agile delivery.',
     technologies: ['ASP.NET', 'C#', 'JavaScript', 'LinQ', 'SQL Server', 'jQuery'],
   },
   {
@@ -26,7 +26,7 @@ const experiences = [
     company: 'Thapar University',
     location: 'Patiala, Punjab',
     period: '2017 - 2021',
-    description: 'Graduated with honors. Focused on algorithms, data structures, and software engineering principles. Active in coding competitions and tech clubs.'
+    description: 'Received my Bachelor of Engineering in Electronics and Computers with distinction. CGPA 8.28 on a 10 point scale.'
   },
   {
     type: 'education',
@@ -34,7 +34,7 @@ const experiences = [
     company: 'Langara College',
     location: 'Vancouver, Canada',
     period: '2023 - 2024',
-    description: 'Graduated with honors. Focused on algorithms, data structures, and software engineering principles. Active in coding competitions and tech clubs.'
+    description: 'Received my Post Graduation in Web and Mobile App Design and Development with distinction. GPA 3.93 on a 4 point scale.'
   },
   {
     type: 'professional',
@@ -42,7 +42,7 @@ const experiences = [
     company: 'Smart Energy Water',
     location: 'Noida, India',
     period: 'January 2021 - June 2021',
-    description: 'Developed automated testing frameworks that reduced manual testing time by 60%. Worked on API integration and database optimization.',
+    description: 'Resolved 100+ frontend and backend bugs, optimized API responses, and removed redundant database calls—reducing system latency by ~15%. Contributed to ongoing maintenance and QA for enterprise utility apps.',
   },
 ]
 
