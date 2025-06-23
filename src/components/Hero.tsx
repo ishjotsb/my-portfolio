@@ -15,22 +15,15 @@ export function Hero() {
 
   const { theme } = useTheme();
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
-  const [windowSize, setWindowSize] = useState({ w: 0, h: 0 });
 
   useEffect(() => {
     if (theme !== 'dark') return;
     const handleMouseMove = (e: MouseEvent) => {
       setCursor({ x: e.clientX, y: e.clientY });
     };
-    const handleResize = () => {
-      setWindowSize({ w: window.innerWidth, h: window.innerHeight });
-    };
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('resize', handleResize);
-    handleResize();
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('resize', handleResize);
     };
   }, [theme]);
 
