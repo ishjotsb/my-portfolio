@@ -154,10 +154,12 @@ export function Projects() {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            <Github className="h-5 w-5 mr-2" />
-            View All Projects on GitHub
-          </Button>
+          <a href="https://github.com/ishjotsb" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="lg">
+              <Github className="h-5 w-5 mr-2" />
+              View All Projects on GitHub
+            </Button>
+          </a>
         </div>
       </div>
     </section>
