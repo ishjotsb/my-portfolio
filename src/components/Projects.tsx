@@ -7,9 +7,9 @@ const projects = [
     title: 'Praisely',
     description: 'A SaaS platform that enables businesses to collect and display customer reviews via unique product pages and customizable “Wall of Love” embeds.',
     image: '/praisely.png',
-    technologies: ['React', 'Node.js', 'MongoDB'],
+    technologies: ['React', 'Node.js', 'MongoDB', 'Mongoose', 'Vercel'],
     visit: 'https://praisely.vercel.app',
-    demo: '#',
+    demo: 'https://youtu.be/_e1InT-G2Lc?si=sZ17bcn3zCTg5HNk',
     featured: true,
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     image: '/plant.png',
     technologies: ['React Native', 'Expo', 'Firebase'],
     visit: 'https://plan-t.ca',
-    demo: '#',
+    demo: 'https://plan-t.ca',
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     image: '/peekabite.png',
     technologies: ['Next.js', 'Supabase', 'Tailwind CSS'],
     visit: 'https://peekabite.ca',
-    demo: '#',
+    demo: 'https://youtu.be/yQRrk_TNynE?si=pQY7erqqjEk4n7my',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     image: '/mailstorm.png',
     technologies: ['React', 'Express', 'SendGrid'],
     visit: 'https://mailstorm.vercel.app',
-    demo: '#',
+    demo: 'https://mailstorm.vercel.app',
     featured: true,
   },
 ]
