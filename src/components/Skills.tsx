@@ -108,24 +108,7 @@ export function Skills() {
           </div>
         </div>
 
-        {/* Skills Grid for Better Mobile Experience */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 mt-16 md:hidden">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-            >
-              <img
-                src={skill.logo}
-                alt={skill.name}
-                className="w-10 h-10"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement
-                  target.style.display = 'none'
-                }}
-              />
-            </div>
-          ))}
-        </div>
+
       </div>
     </section>
   )
